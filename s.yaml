@@ -29,13 +29,11 @@ resources:
         # 当修改初始项目后，执行下列命令进行代码产物构建
         - run: npm i --registry=https://registry.npmmirror.com/
           path: ./
-        - run: yarn
+        - run: npm run setup
           path: ./
-        - run: yarn setup
+        - run: npm run build all
           path: ./
-        - run: yarn build all
-          path: ./
-        - run: yarn docs:build
+        - run: npm run docs:build
           path: ./
         - plugin: website-plugin-v3
           args:
