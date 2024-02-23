@@ -29,9 +29,9 @@ resources:
         # 当修改初始项目后，执行下列命令进行代码产物构建
         - run: npm i --registry=https://registry.npmmirror.com/
           path: ./
-        - run: npm run setup
-          path: ./
         - run: npm run build all
+          path: ./
+        - run: npm run setup
           path: ./
         - run: npm run docs:build
           path: ./
