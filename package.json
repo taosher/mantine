@@ -26,6 +26,7 @@
     "storybook": "storybook dev -p 6006",
     "dev": "npm run docs",
     "docs": "cd docs && npm run dev",
+    "docs:serve": "serve ./docs/out",
     "docs:docgen": "esno scripts/docgen",
     "docs:codegen": "esno scripts/codegen",
     "docs:build": "npm run docs:docgen && cd docs && npm run build",
