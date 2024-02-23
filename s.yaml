@@ -27,7 +27,7 @@ resources:
     actions:
       pre-deploy:
         # 当修改初始项目后，执行下列命令进行代码产物构建
-        - run: yarn set version stable
+        - run: npm i --registry=https://registry.npmmirror.com/
           path: ./
         - run: yarn
           path: ./
