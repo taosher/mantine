@@ -29,7 +29,9 @@ services:
       pre-deploy:
         - run: yarn install
           path: ./
-        - run: yarn build:all
+        - run: yarn setup
+          path: ./
+        - run: yarn build all
           path: ./
         - run: yarn docs:build
           path: ./
@@ -43,7 +45,7 @@ services:
         name: "mantine-doc"
         description: "Serverless Devs Website Docusaurus Function"
         runtime: nodejs16
-        codeUri: ./docs/public
+        codeUri: ./docs/out
         timeout: 30
         memorySize: 512
       triggers:
