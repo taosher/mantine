@@ -27,7 +27,7 @@ services:
     component: fc # 组件名称
     actions:
       pre-deploy:
-        - run: yarn install
+        - run: yarn
           path: ./
         - run: yarn setup
           path: ./
