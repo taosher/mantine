@@ -27,6 +27,8 @@ resources:
     actions:
       pre-deploy:
         # 当修改初始项目后，执行下列命令进行代码产物构建
+        - run: npm i -g yarn
+          path: ./
         - run: yarn
           path: ./
         - run: yarn setup
